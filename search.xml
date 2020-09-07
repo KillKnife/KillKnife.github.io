@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>JAVA环境的配置与验证</title>
+      <link href="/posts/1602382619/"/>
+      <url>/posts/1602382619/</url>
+      
+        <content type="html"><![CDATA[<h2 id="下载jdk"><a href="#下载jdk" class="headerlink" title="下载jdk"></a>下载jdk</h2><p>首先进入<a href="https://www.oracle.com/cn/java/technologies/javase/javase-jdk8-downloads.html">甲骨文官网</a>根据自己的需求，下载jdk安装包或压缩包，然后安装或压缩到自己想要放的位置。</p><h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p>右击此电脑→属性→高级系统设置→高级→环境变量<br><strong>第一步：</strong><br>点击系统变量的新建<br>变量名：Java_Home<br>变量值：刚才下载的jdk安装路径。我的放在盘。<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200623085134634.png" alt="Java_Home"><br><strong>第二步：</strong><br>点击系统变量的新建<br>变量名：CLASSPATH<br>变量值：.;%Java_Home%\bin;%Java_Home%\lib\dt.jar;%Java_Home%\lib\tools.jar<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/202006230854308.png" alt="CLASSPATH"><br><strong>第三步：</strong><br>双击打开系统变量里的Path，在最前面加上%Java_Home%\bin;%Java_Home%\jre\bin;<br>变量名：Path<br>变量值：%Java_Home%\bin;%Java_Home%\jre\bin;<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200623085908827.png" alt="Path"></p><h2 id="验证环境"><a href="#验证环境" class="headerlink" title="验证环境"></a>验证环境</h2><p>输入 java -version   系统输出版本信息，<br>再输入 javac -version    系统输出版本信息<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20200623090212184.png" alt="环境验证"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JAVA </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JAVA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>利用Spring实现QQ邮箱的发送</title>
       <link href="/posts/2258766305/"/>
       <url>/posts/2258766305/</url>
