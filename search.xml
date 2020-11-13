@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Mybatis懒加载报错末尾显示_$$_jvst12a_0[&quot;handler&quot;])的解决方案</title>
+      <link href="/posts/2258766377/"/>
+      <url>/posts/2258766377/</url>
+      
+        <content type="html"><![CDATA[<h2 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h2><p>运行时异常:Type definition error: [simple type, class org.apache.ibatis.executor.loader.javassist.JavassistProxyFactory$EnhancedResultObjectProxyImpl]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.apache.ibatis.executor.loader.javassist.JavassistProxyFactory$EnhancedResultObjectProxyImpl and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: com.ruoyi.framework.web.page.TableDataInfo[“rows”]-&gt;com.github.pagehelper.Page[0]-&gt;com.ruoyi.project.system.student.domain.ZStudent_$$_jvst12a_0[“handler”])</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>1.关闭该查询的懒加载 fetchType=”eager”</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">collection</span> <span class="attr">...</span>  <span class="attr">fetchType</span>=<span class="string">&quot;eager&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">collection</span>&gt;</span></span><br></pre></td></tr></table></figure><p>2.返回的类加上注解（即实体类）</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@JsonIgnoreProperties(value = &#123; &quot;handler&quot; &#125;)</span></span><br></pre></td></tr></table></figure><p>3.配置json转换器属性SerializationFeature.FAIL_ON_EMPTY_BEANS为false</p><p>该方法请参考<a href="https://blog.csdn.net/justinytsoft/article/details/53575236">请点击此处跳转到解决方案</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Mybatis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Mybatis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JAVA环境的配置与验证</title>
       <link href="/posts/1602382619/"/>
       <url>/posts/1602382619/</url>
