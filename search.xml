@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Spring Boot的热部署问题</title>
+      <link href="/posts/2258766381/"/>
+      <url>/posts/2258766381/</url>
+      
+        <content type="html"><![CDATA[<p>我们在使用Spring Boot时，只要改一点代码就要去重启一下启动类，这样会浪费我们大量的时间，所以我们需要使用热部署，来解决重复启动的问题。<br>我们只需要把下面的这段代码加到==pom.xml==文件中，就可以实现热部署。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><p>添加完成后，我们就可以发现文件后面多了后缀<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20191205145722692.png" alt="热部署"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SpringBoot </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SpringBoot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Mybatis懒加载源码（内含Spring Boot部分）</title>
       <link href="/posts/2258766380/"/>
       <url>/posts/2258766380/</url>
