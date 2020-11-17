@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>SpringBoot启动成功后，访问接口报错404(error“Not Found“)</title>
+      <link href="/posts/5211314001/"/>
+      <url>/posts/5211314001/</url>
+      
+        <content type="html"><![CDATA[<h2 id="具体报错"><a href="#具体报错" class="headerlink" title="具体报错"></a>具体报错</h2><p> 1.Postman测试结果：<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201117142217261.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTA5NzczMg==,size_16,color_FFFFFF,t_70#pic_center" alt="Postman测试结果"><br>2.控制台输出<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201117142437111.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTA5NzczMg==,size_16,color_FFFFFF,t_70#pic_center" alt="控制台输出"></p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>出现这个问题的原因是没有对包进行扫描，在启动类上==加入@ComponentScan()注解==，里面填入具体想要扫描的包名。<br><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/20201117142742345.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTA5NzczMg==,size_16,color_FFFFFF,t_70#pic_center" alt="加入@ComponentScan注解"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> SpringBoot </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SpringBoot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/posts/1243066710/"/>
       <url>/posts/1243066710/</url>
